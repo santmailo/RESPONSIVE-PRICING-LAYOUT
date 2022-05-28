@@ -4,9 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pricing layout</title>
+    <style>
+
+        #container{
+            width:55%;
+            height: auto;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin:auto;
+            margin-top: 40px;
+        }
+
+        h1{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 0px;
+        }
+
+        #heading{
+            width: 60%;
+            margin:auto;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        #cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+
+        #cards>div{
+            border-radius: 15px;
+            padding: 30px;
+            padding-top: 0px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        #cards>div:nth-child(1)>h2{
+            color: green;
+        }
+
+        #cards>div:nth-child(2)>h2{
+            color: orange;
+        }
+
+        #cards>div:nth-child(3)>h2{
+            color: blue;
+        }
+
+        h2{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+
+        h3{
+            margin-top: 30px;
+        }
+
+        p{
+            color: rgb(109, 107, 107);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h2+p{
+            margin-top: 0px;
+            padding-top: 0px;
+            margin-bottom: 35px;
+            font-size:13px;
+            font-style: italic;
+            font-weight: 500;
+            color: rgb(109, 107, 107);
+        }
+        
+        button{
+            margin-top: 20px;
+            padding: 12px 30px 12px 30px;
+            font-size:small;
+            border-radius: 5px;
+            border:2px solid rgb(83, 126, 255);
+            color: rgb(83, 126, 255);
+            font-weight: bolder;
+            background-color: transparent;
+        }
+
+        button:hover{
+            cursor: pointer;
+            color:white;
+            background-color: rgb(83, 126, 255);
+        }
+
+
+        @media all and (min-width:601) and (max-width: 1024px) {
+
+            #cards{
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 400px 400px;
+            gap: 20px;
+        }
+            
+        }
+
+        @media all and (max-width:600px){
+
+            #cards{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+
+        }
+    </style>
 </head>
 <body>
+
+    <div id="container">
+
+        <div id="heading">
+            <h1>Choose a plan that right for your Business</h1>
+            <p>We collect reviews from our users so you can get honest opinion of what an experience with our website are really like!</p>
+        </div>
+
+        <div id="cards">
+            <div>
+                <h3>Starter Plan</h3>
+                <h2>Free</h2>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get honest opinion of what an experience with our website.</p>
+                <button>Start Now</button>
+            </div>
+
+            <div>
+                <h3>Starter Plan</h3>
+                <h2>Free</h2>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get honest opinion of what an experience with our website.</p>
+                <button>Start Now</button>
+            </div>
+
+            <div>
+                <h3>Starter Plan</h3>
+                <h2>Free</h2>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get honest opinion of what an experience with our website.</p>
+                <button>Start Now</button>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
